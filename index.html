@@ -3,8 +3,8 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="icon" type="image/svg+xml" href="assets/color.jpg" />
-    <title>Styled E-Commerce</title>
+    <link rel="icon" type="image/svg+xml" href="assets/Logo.png" />
+    <title>Trendy_Cart</title>
     <link rel="stylesheet" href="style.css" />
     <link
       rel="stylesheet"
@@ -19,29 +19,45 @@
         <input type="password" placeholder="Password" />
         <button onclick="alert('login success'), closeLogin()">Login</button>
         <p>
-          <a href="#" onclick="closeLogin()" style="color: black">Cancel</a>
+          <a href="#" onclick="closeLogin()" style="color: rgb(245, 239, 239)"
+            >Cancel</a
+          >
         </p>
       </div>
     </div>
 
-    <header class="topnav">
-      <img src="assets/cart.webp" alt="error" />
-      <div class="logo" style="font-size: 34px">BigBill</div>
-      <input
-        type="text"
-        class="search"
-        placeholder="Enter your product name..."
-      />
-      <div class="user-actions">
-        <i class="fa-solid fa-user-plus"></i>
-        <a href="#" onclick="openLogin()">Login</a>
-        <a href="#">Cart</a>
+    <header class="navbar">
+      <div class="navbar-container">
+        <div class="logo">
+          <img src="assets/Logo.png" alt="Logo" />
+          <h1>Trendy_Cart</h1>
+        </div>
+
+        <nav class="nav-links">
+          <a href="#"><i class="fas fa-home"></i> Home</a>
+          <a href="#"><i class="fas fa-phone"></i> Contact</a>
+          <a href="#"><i class="fas fa-question-circle"></i> Help</a>
+          <a href="#" onclick="openLogin()"
+            ><i class="fas fa-user-plus"></i> Login</a
+          >
+          <a href="#"><i class="fas fa-shopping-cart"></i> Cart</a>
+          <span class="close-btn" onclick="toggleMenu()">✖</span>
+        </nav>
+
+        <!-- Hamburger Menu Icon -->
+        <div class="hamburger" onclick="toggleMenu()">
+          <i class="fas fa-bars"></i>
+        </div>
       </div>
     </header>
 
-    <section class="banner">
-      <img src="assets/banneres.jpg" alt="Main Banner" />
-    </section>
+    <div class="banner">
+      <div class="slides">
+        <img src="assets/finalbanner.jpg" alt="Main Banner" />
+        <img src="assets/banner2.jpg" alt="Main Banner" />
+        <img src="assets/banner3.jpg" alt="Main Banner" />
+      </div>
+    </div>
 
     <main class="product-section">
       <h2>New Arrivals</h2>
@@ -158,9 +174,75 @@
       </div>
     </main>
 
-    <footer class="footer">
-      <p>© 2025 Anon. All rights reserved.</p>
+    <footer style="background-color: #222; color: #fff; padding: 40px 20px">
+      <div
+        class="foot-container"
+        style="
+          max-width: 1200px;
+          margin: auto;
+          display: flex;
+          flex-wrap: wrap;
+          justify-content: space-between;
+        "
+      >
+        <!-- About Section -->
+        <div style="flex: 1; min-width: 200px; margin-bottom: 20px">
+          <h3 style="margin-bottom: 10px">About Us</h3>
+          <p style="line-height: 1.6">
+            We are a trusted e-commerce platform delivering top-quality products
+            and great service to our customers.
+          </p>
+        </div>
+
+        <!-- Contact Section -->
+        <div style="flex: 1; min-width: 200px; margin-bottom: 20px">
+          <h3 style="margin-bottom: 10px">Contact</h3>
+          <p>Email: support@yourstore.com</p>
+          <p>Phone: +91 98765 43210</p>
+          <p>Location: Chennai, India</p>
+        </div>
+
+        <!-- Help Section -->
+        <div style="flex: 1; min-width: 200px; margin-bottom: 20px">
+          <h3 style="margin-bottom: 10px">Help</h3>
+          <ul style="list-style: none; padding: 0">
+            <li>
+              <a href="#" style="color: #ccc; text-decoration: none"
+                >Shipping</a
+              >
+            </li>
+            <li>
+              <a href="#" style="color: #ccc; text-decoration: none">Returns</a>
+            </li>
+            <li>
+              <a href="#" style="color: #ccc; text-decoration: none">FAQ</a>
+            </li>
+            <li>
+              <a href="#" style="color: #ccc; text-decoration: none"
+                >Privacy Policy</a
+              >
+            </li>
+          </ul>
+        </div>
+
+        <!-- Social Media Links -->
+        <div
+          class="Social"
+          style="flex: 1; min-width: 200px; margin-bottom: 20px"
+        >
+          <h3 style="margin-bottom: 10px">Follow Us</h3>
+          <a href="#" style="margin-right: 10px; color: #ccc">Facebook</a>
+          <a href="#" style="margin-right: 10px; color: #ccc">Instagram</a>
+          <a href="#" style="margin-right: 10px; color: #ccc">Twitter</a>
+        </div>
+      </div>
+
+      <!-- Copyright -->
+      <div style="text-align: center; margin-top: 30px; color: #aaa">
+        &copy; 2025 Trendy_Cart. All rights reserved.
+      </div>
     </footer>
+
     <script src="script.js"></script>
   </body>
 </html>
